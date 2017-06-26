@@ -2,7 +2,10 @@ function i18n_load_ns(namespaces, callback) {
     var options = {
         // "whitelist": ["en", "de"],
         // "nonExplicitWhitelist": true,
-        "fallbackLng": "en"
+        "fallbackLng": "en",
+        backend: {
+          loadPath: 'https://gervasiocaj.github.io/8values.github.io/locales/{{lng}}/{{ns}}.json',
+        }
     }
 
     if (namespaces) options.ns = namespaces
